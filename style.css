@@ -1,0 +1,185 @@
+/* Grails brand accents: orange from grails_logo.svg, green from the Grails site */
+:root {
+  --grails-orange: #FEB571;
+  --grails-green: #63A34C;
+  --slidev-code-font-size: 11.5px;
+  --slidev-code-line-height: 16px;
+  --slidev-code-padding: 10px;
+}
+
+.slidev-layout {
+  background: #101418;
+  --slidev-code-font-size: 10px;
+  --slidev-code-line-height: 14.5px;
+  --slidev-code-padding: 10px;
+}
+
+.slidev-layout h1 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.slidev-layout h1 code,
+.slidev-layout h2 code {
+  font-size: 0.8em;
+  color: var(--grails-orange);
+  background: transparent;
+}
+
+/* code size is driven by the --slidev-code-* vars above (defaults: 12px / 18px) */
+
+.slidev-layout table {
+  font-size: 0.82em;
+}
+
+.slidev-layout table th {
+  color: var(--grails-orange);
+  font-weight: 600;
+}
+
+.slidev-layout table td, .slidev-layout table th {
+  padding: 0.28em 0.7em;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #101418;
+  background: var(--grails-orange);
+  border-radius: 999px;
+  padding: 0.15em 0.6em;
+  vertical-align: middle;
+  margin-left: 0.4em;
+}
+
+.badge.green {
+  background: var(--grails-green);
+  color: #fff;
+}
+
+.callout {
+  border-left: 4px solid var(--grails-orange);
+  background: rgba(254, 181, 113, 0.08);
+  padding: 0.5em 0.9em;
+  border-radius: 0 6px 6px 0;
+  margin-top: 0.8em;
+}
+
+.callout.green {
+  border-color: var(--grails-green);
+  background: rgba(99, 163, 76, 0.1);
+}
+
+.muted { opacity: 0.6; }
+.small { font-size: 0.8em; }
+.tiny { font-size: 0.68em; }
+
+/* seriph's `.slidev-layout.cover h1` sets a fixed 5rem line-height; match its specificity to override */
+.slidev-layout.cover.cover-slide h1 {
+  font-size: 2.6rem;
+  line-height: 1.1;
+  margin-bottom: 0.7em;
+}
+
+/* seriph's `.slidev-layout.section h1` outranks a plain class selector */
+.slidev-layout.section.section-slide h1 {
+  font-weight: 700;
+}
+
+.section-slide p {
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+
+.kbd {
+  font-family: var(--slidev-code-font-family);
+  font-size: 0.85em;
+  background: rgba(255,255,255,0.08);
+  border-radius: 4px;
+  padding: 0.05em 0.4em;
+}
+
+/* per-slide code size: `class: code-lh-<line-height>` in the slide frontmatter (12 … 30, half steps).
+   Font size is line-height / 1.4. Pick the largest value whose export still fits; measure, don't guess. */
+.slidev-layout.code-lh-12 { --slidev-code-font-size: 8.6px; --slidev-code-line-height: 12.0px; }
+.slidev-layout.code-lh-12-5 { --slidev-code-font-size: 8.9px; --slidev-code-line-height: 12.5px; }
+.slidev-layout.code-lh-13 { --slidev-code-font-size: 9.3px; --slidev-code-line-height: 13.0px; }
+.slidev-layout.code-lh-13-5 { --slidev-code-font-size: 9.6px; --slidev-code-line-height: 13.5px; }
+.slidev-layout.code-lh-14 { --slidev-code-font-size: 10.0px; --slidev-code-line-height: 14.0px; }
+.slidev-layout.code-lh-14-5 { --slidev-code-font-size: 10.4px; --slidev-code-line-height: 14.5px; }
+.slidev-layout.code-lh-15 { --slidev-code-font-size: 10.7px; --slidev-code-line-height: 15.0px; }
+.slidev-layout.code-lh-15-5 { --slidev-code-font-size: 11.1px; --slidev-code-line-height: 15.5px; }
+.slidev-layout.code-lh-16 { --slidev-code-font-size: 11.4px; --slidev-code-line-height: 16.0px; }
+.slidev-layout.code-lh-16-5 { --slidev-code-font-size: 11.8px; --slidev-code-line-height: 16.5px; }
+.slidev-layout.code-lh-17 { --slidev-code-font-size: 12.1px; --slidev-code-line-height: 17.0px; }
+.slidev-layout.code-lh-17-5 { --slidev-code-font-size: 12.5px; --slidev-code-line-height: 17.5px; }
+.slidev-layout.code-lh-18 { --slidev-code-font-size: 12.9px; --slidev-code-line-height: 18.0px; }
+.slidev-layout.code-lh-18-5 { --slidev-code-font-size: 13.2px; --slidev-code-line-height: 18.5px; }
+.slidev-layout.code-lh-19 { --slidev-code-font-size: 13.6px; --slidev-code-line-height: 19.0px; }
+.slidev-layout.code-lh-19-5 { --slidev-code-font-size: 13.9px; --slidev-code-line-height: 19.5px; }
+.slidev-layout.code-lh-20 { --slidev-code-font-size: 14.3px; --slidev-code-line-height: 20.0px; }
+.slidev-layout.code-lh-20-5 { --slidev-code-font-size: 14.6px; --slidev-code-line-height: 20.5px; }
+.slidev-layout.code-lh-21 { --slidev-code-font-size: 15.0px; --slidev-code-line-height: 21.0px; }
+.slidev-layout.code-lh-21-5 { --slidev-code-font-size: 15.4px; --slidev-code-line-height: 21.5px; }
+.slidev-layout.code-lh-22 { --slidev-code-font-size: 15.7px; --slidev-code-line-height: 22.0px; }
+.slidev-layout.code-lh-22-5 { --slidev-code-font-size: 16.1px; --slidev-code-line-height: 22.5px; }
+.slidev-layout.code-lh-23 { --slidev-code-font-size: 16.4px; --slidev-code-line-height: 23.0px; }
+.slidev-layout.code-lh-23-5 { --slidev-code-font-size: 16.8px; --slidev-code-line-height: 23.5px; }
+.slidev-layout.code-lh-24 { --slidev-code-font-size: 17.1px; --slidev-code-line-height: 24.0px; }
+.slidev-layout.code-lh-24-5 { --slidev-code-font-size: 17.5px; --slidev-code-line-height: 24.5px; }
+.slidev-layout.code-lh-25 { --slidev-code-font-size: 17.9px; --slidev-code-line-height: 25.0px; }
+.slidev-layout.code-lh-25-5 { --slidev-code-font-size: 18.2px; --slidev-code-line-height: 25.5px; }
+.slidev-layout.code-lh-26 { --slidev-code-font-size: 18.6px; --slidev-code-line-height: 26.0px; }
+.slidev-layout.code-lh-26-5 { --slidev-code-font-size: 18.9px; --slidev-code-line-height: 26.5px; }
+.slidev-layout.code-lh-27 { --slidev-code-font-size: 19.3px; --slidev-code-line-height: 27.0px; }
+.slidev-layout.code-lh-27-5 { --slidev-code-font-size: 19.6px; --slidev-code-line-height: 27.5px; }
+.slidev-layout.code-lh-28 { --slidev-code-font-size: 20.0px; --slidev-code-line-height: 28.0px; }
+.slidev-layout.code-lh-28-5 { --slidev-code-font-size: 20.4px; --slidev-code-line-height: 28.5px; }
+.slidev-layout.code-lh-29 { --slidev-code-font-size: 20.7px; --slidev-code-line-height: 29.0px; }
+.slidev-layout.code-lh-29-5 { --slidev-code-font-size: 21.1px; --slidev-code-line-height: 29.5px; }
+.slidev-layout.code-lh-30 { --slidev-code-font-size: 21.4px; --slidev-code-line-height: 30.0px; }
+
+.slidev-layout[class*="code-lh-"] .slidev-code,
+.slidev-layout[class*="code-lh-"] .slidev-code code,
+.slidev-layout[class*="code-lh-"] .slidev-code .line {
+  line-height: var(--slidev-code-line-height) !important;
+}
+
+/* Lists and paragraphs: tighter lines inside an item, clear gap between items.
+   (Slidev's base gives li a 1.8em line-height and no item margin, which makes
+   wrapped bullets look like separate ones.) */
+.slidev-layout li {
+  line-height: 1.4;
+}
+
+.slidev-layout li + li {
+  margin-top: 0.5em;
+}
+
+.slidev-layout li > ul,
+.slidev-layout li > ol {
+  margin-top: 0.35em;
+}
+
+.slidev-layout li > ul > li + li,
+.slidev-layout li > ol > li + li {
+  margin-top: 0.25em;
+}
+
+.slidev-layout p {
+  line-height: 1.45;
+}
+
+.slidev-layout .small li + li {
+  margin-top: 0.35em;
+}
+
+/* secondary part of a slide title, after the colon */
+.slidev-layout h1 .title-sub {
+  font-weight: 400;
+  color: var(--slidev-theme-default-text, #e5e7eb);
+  opacity: 0.75;
+}

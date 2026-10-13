@@ -1,0 +1,28 @@
+node_modules
+.DS_Store
+dist
+*.local
+.vite-inspect
+.remote-assets
+components.d.ts
+
+# demo project
+demo/build
+demo/.gradle
+demo/.idea
+demo/*.iml
+
+# exports (the published deck lives in public/)
+*.pdf
+!public/*.pdf
+slides-export*
+
+# visual check exports
+.export-check
+
+# throwaway apps generated to read historical versions
+.version-check
+.export-check-clicks
+
+# IDE
+.idea
